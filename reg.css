@@ -1,0 +1,198 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e8f5e9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    background-image: url('download.jpg');
+    background-size: cover;  
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#startEnrollmentButton {
+    font-size: 1.5em;
+    padding: 20px;
+    background-color: #ff4081; 
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#enrollmentContainer {
+    display: none;
+    width: 100%;
+    max-width: 1200px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #d5006d; 
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.form-column,
+.student-column {
+    flex: 1;
+    margin: 0 20px;
+    padding: 20px;
+    border: 1px solid #ff4081; 
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.student-column {
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="button"],
+input[type="reset"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #ff4081; 
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+    border-color: #ff80ab; 
+    outline: none;
+}
+
+input[type="button"],
+input[type="reset"],
+button {
+    background-color: #ff4081; 
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 10px;
+}
+
+input[type="button"]:hover,
+input[type="reset"]:hover,
+button:hover {
+    background-color: #f50057; 
+    transform: translateY(-2px);
+}
+
+
+.hidden {
+    display: none;
+}
+
+#genderOptions,
+#skillsOptions {
+    border: 2px solid #ff4081; 
+    padding: 10px;
+    margin-top: 5px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+#genderOptions label,
+#skillsOptions label {
+    display: block;
+    margin-top: 5px;
+}
+
+#additionalFields {
+    display: none;
+}
+
+#additionalFields input[type="text"] {
+    cursor: pointer;
+}
+
+
+#enrolledStudents {
+    flex: 1;
+    border-left: 1px solid #ff4081;
+    padding-left: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+#enrolledStudents h2 {
+    color: #d5006d; 
+}
+
+#studentList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#studentList li {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f1f8e9; 
+    border-left: 5px solid #ff4081; 
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#studentList li:hover {
+    background-color: #ffebee; 
+    transform: translateY(-2px);
+}
+
+#studentList button {
+    background-color: #ff5252; 
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#studentList button:hover {
+    background-color: #e53935; 
+    transform: translateY(-2px);
+}
+
+
+#alertMessage {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
