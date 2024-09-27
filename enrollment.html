@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Enrollment Form</title>
+    <link rel="stylesheet" href="reg.css">
+</head>
+<body>
+    <button id="startEnrollmentButton" onclick="startEnrollment()">Start Student Enrollment</button>
+
+    <div id="enrollmentContainer" style="display: none;">
+        <h1>Student Enrollment Form</h1>
+        <div class="container">
+            <form id="enrollmentForm" onsubmit="return validateForm()">
+                <div class="form-column">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                    
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                    
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" required>
+                    
+                    <button type="button" onclick="showAdditionalFields()">Next</button>
+                    
+                    <div id="additionalFields" style="display:none;">
+                        <label for="gender">Gender:</label>
+                        <input type="text" id="gender" name="gender" readonly onclick="showGenderOptions()" required>
+
+                        
+                        <div id="genderOptions" style="display:none;">
+                            <label><input type="radio" name="genderOption" value="Male" onclick="selectGender(this)"> Male</label>
+                            <label><input type="radio" name="genderOption" value="Female" onclick="selectGender(this)"> Female</label>
+                        </div>
+
+                        <label for="skills">Skills:</label>
+                        <input type="text" id="skillsInput" name="skillsInput" readonly onclick="showSkillsOptions()" required>
+
+
+                        <div id="skillsOptions" style="display:none;">
+                            <label><input type="checkbox" name="skillsOption" value="Java" onclick="selectSkill(this)"> Java</label>
+                            <label><input type="checkbox" name="skillsOption" value="C" onclick="selectSkill(this)"> C</label>
+                            <label><input type="checkbox" name="skillsOption" value="C++" onclick="selectSkill(this)"> C++</label>
+                            <label><input type="checkbox" name="skillsOption" value="HTML" onclick="selectSkill(this)"> HTML</label>
+                            <label><input type="checkbox" name="skillsOption" value="CSS" onclick="selectSkill(this)"> CSS</label>
+                            <label><input type="checkbox" name="skillsOption" value="JavaScript" onclick="selectSkill(this)"> JavaScript</label>
+                        </div>
+                        
+                        <button type="submit">Enroll Student</button>
+                        <button type="button" onclick="clearForm()">Clear</button>
+                    </div>
+                </div>
+            </form>
+            
+            <div class="student-column">
+                <h2>Enrolled Students</h2>
+                <ul id="studentList"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="reg.js"></script>
+</body>
+</html>
