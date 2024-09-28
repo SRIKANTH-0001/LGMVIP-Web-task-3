@@ -6,7 +6,7 @@ DOMAIN:Web development
 DURATION🕓:4 Weeks                    
 
                                                 Student Enrollment Form
-Inro:
+Intro:
 
 This project is a web-based application designed to manage student enrollments. It features a user-friendly interface where users can input student details, and it displays the enrolled students on the same page. The project is built using HTML, CSS, and JavaScript.
 
